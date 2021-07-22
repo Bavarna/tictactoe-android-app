@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.bavarna.tictactoeapp.viewmodel.TicTacToeViewModel" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:id="@+id/relativelayout"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_view_p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Turn : "
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/button_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="33dp"
+                android:onClick="@{() -> viewmodel.reset()}"
+                android:text="reset" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[0][0]}"
+                android:onClick="@{() -> viewmodel.onButton00Clicked()}"
+                android:textSize="60sp" />
+            <Button
+                android:id="@+id/button_01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[0][1]}"
+                android:onClick="@{() -> viewmodel.onButton01Clicked()}"
+                android:textSize="60sp" />
+            <Button
+                android:id="@+id/button_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[0][2]}"
+                android:onClick="@{() -> viewmodel.onButton02Clicked()}"
+                android:textSize="60sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[1][0]}"
+                android:onClick="@{() -> viewmodel.onButton10Clicked()}"
+                android:textSize="60sp" />
+            <Button
+                android:id="@+id/button_11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[1][1]}"
+                android:onClick="@{() -> viewmodel.onButton11Clicked()}"
+                android:textSize="60sp" />
+            <Button
+                android:id="@+id/button_12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[1][2]}"
+                android:onClick="@{() -> viewmodel.onButton12Clicked()}"
+                android:textSize="60sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[2][0]}"
+                android:onClick="@{() -> viewmodel.onButton20Clicked()}"
+                android:textSize="60sp" />
+            <Button
+                android:id="@+id/button_21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[2][1]}"
+                android:onClick="@{() -> viewmodel.onButton21Clicked()}"
+                android:textSize="60sp" />
+            <Button
+                android:id="@+id/button_22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@{viewmodel.gameInput[2][2]}"
+                android:onClick="@{() -> viewmodel.onButton22Clicked()}"
+                android:textSize="60sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
